@@ -3,51 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>yudha.dev</title>
-  <link rel="stylesheet" href="style.css?v=8">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Fira+Code&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <title>Yudha Laurens — Full-Stack Developer &amp; Cyber Security Student</title>
+  <meta name="description" content="Yudha Dwi Anantha Laurens — mahasiswa Computer Science (Cyber Security) di BINUS University. Membangun aplikasi web full-stack dengan pola pikir security-first. Terbuka untuk internship.">
+  <meta name="author" content="Yudha Dwi Anantha Laurens">
+  <meta name="theme-color" content="#070e17">
+  <link rel="canonical" href="https://portofolioyudha-livid.vercel.app/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yudha Laurens — Full-Stack Developer & Cyber Security Student">
+  <meta property="og:description" content="Membangun aplikasi web full-stack dengan pola pikir security-first. Terbuka untuk internship.">
+  <meta property="og:url" content="https://portofolioyudha-livid.vercel.app/">
+  <meta property="og:image" content="https://portofolioyudha-livid.vercel.app/assets/profile.jpg">
+  <meta property="og:locale" content="id_ID">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yudha Laurens — Full-Stack Developer & Cyber Security Student">
+  <meta name="twitter:description" content="Membangun aplikasi web full-stack dengan pola pikir security-first. Terbuka untuk internship.">
+  <meta name="twitter:image" content="https://portofolioyudha-livid.vercel.app/assets/profile.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yudha Dwi Anantha Laurens",
+    "url": "https://portofolioyudha-livid.vercel.app/",
+    "jobTitle": "Computer Science Student & Full-Stack Developer",
+    "email": "mailto:yudhaanantha@gmail.com",
+    "image": "https://portofolioyudha-livid.vercel.app/assets/profile.jpg",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universitas Bina Nusantara" },
+    "homeLocation": { "@type": "Place", "name": "Jakarta, Indonesia" },
+    "sameAs": [
+      "https://github.com/YudhaLaurens",
+      "https://www.linkedin.com/in/yudha-laurens/"
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Terapkan tema + flag JS sebelum render supaya tidak berkedip -->
+  <script>
+    document.documentElement.classList.add('js');
+    if (localStorage.getItem('theme') === 'light') document.documentElement.classList.add('light-theme');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Lewati ke konten</a>
 
   <!-- NAVBAR -->
-  <nav class="pill-nav">
-    <div class="nav-brand">
+  <nav class="pill-nav" aria-label="Navigasi utama">
+    <a class="nav-brand" href="#top" aria-label="Kembali ke atas">
       <span class="brand-logo">YL</span>
       <span class="brand-name">yudha.dev</span>
-    </div>
-    <div class="nav-links">
+    </a>
+    <div class="nav-links" id="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
-      <a href="#journey">Journey</a>
+      <a href="#journey">Timeline</a>
       <a href="#certificates">Certificates</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-actions">
-      <a href="assets/CV%20Yudha%20Dwi%20Anantha%20Laurens.pdf" class="nav-cv-btn"><i data-lucide="file-text"></i> CV</a>
-      <button class="nav-icon-btn" id="theme-toggle"><i data-lucide="sun"></i></button>
+      <a href="assets/CV%20Yudha%20Dwi%20Anantha%20Laurens.pdf" class="nav-cv-btn" download><i data-lucide="file-text" aria-hidden="true"></i> CV</a>
+      <button class="nav-icon-btn" id="theme-toggle" type="button" aria-label="Ganti tema terang/gelap"><i data-lucide="sun" aria-hidden="true"></i></button>
+      <button class="nav-icon-btn nav-menu-btn" id="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links"><i data-lucide="menu" aria-hidden="true"></i></button>
     </div>
   </nav>
 
-  <main class="container">
-    
-    <!-- HERO SECTION -->
-    <section class="hero-section">
+  <main class="container" id="main">
+
+    <!-- HERO -->
+    <section class="hero-section" id="top">
       <div class="hero-content reveal-left">
         <div class="status-pill">
           <span class="status-dot"></span> Available for Internship
         </div>
-        
-        <h1 class="hero-headline">Engineering software with an adversarial security mindset.</h1>
-        
+
+        <h1 class="hero-headline">Full-stack developer dengan pola pikir <span class="hl">security-first</span>.</h1>
+
         <p class="hero-desc">
           Saya <strong>Yudha Dwi Anantha Laurens</strong>, mahasiswa Computer Science (Semester 5) dengan fokus mobility <em>Cyber Security</em> di Universitas Bina Nusantara. Membangun aplikasi web full-stack yang tangguh, aman, dan berorientasi pada pemecahan masalah nyata.
         </p>
 
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">Lihat Proyek Unggulan <i data-lucide="arrow-down-right"></i></a>
-          <a href="#contact" class="btn btn-secondary">Hubungi Saya <i data-lucide="mail"></i></a>
+          <a href="#projects" class="btn btn-primary">Lihat Proyek Unggulan <i data-lucide="arrow-down-right" aria-hidden="true"></i></a>
+          <a href="#contact" class="btn btn-secondary">Hubungi Saya <i data-lucide="mail" aria-hidden="true"></i></a>
         </div>
 
         <div class="hero-meta">
@@ -57,19 +105,23 @@
           </div>
           <div class="meta-item">
             <span class="meta-label">MAJOR</span>
-            <span class="meta-value">CS & Cyber Security</span>
+            <span class="meta-value">CS &amp; Cyber Security</span>
           </div>
           <div class="meta-item">
             <span class="meta-label">GITHUB</span>
-            <a href="https://github.com/YudhaLaurens" target="_blank" class="meta-link">@yudha-laurens</a>
+            <a href="https://github.com/YudhaLaurens" target="_blank" rel="noopener noreferrer" class="meta-link">@YudhaLaurens</a>
           </div>
         </div>
       </div>
 
       <div class="hero-visual reveal-right delay-2">
         <div class="profile-card">
-          <img src="assets/profile.jpg" alt="Yudha Laurens" onerror="this.src='https://ui-avatars.com/api/?name=Yudha+Laurens&background=101828&color=fff&size=400'">
-          <div class="terminal-card">
+          <picture>
+            <source type="image/webp" srcset="assets/profile-480.webp 480w, assets/profile.webp 800w" sizes="(max-width: 900px) 90vw, 440px">
+            <img src="assets/profile.jpg" alt="Foto Yudha Laurens" width="800" height="1200" fetchpriority="high" decoding="async"
+                 onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Yudha+Laurens&background=101828&color=fff&size=400'">
+          </picture>
+          <div class="terminal-card" aria-hidden="true">
             <div class="term-header">
               <div class="term-dots"><span class="t-red"></span><span class="t-yel"></span><span class="t-grn"></span></div>
               <div class="term-title">binus.cs.security</div>
@@ -84,276 +136,408 @@
       </div>
     </section>
 
-    <!-- SECTION 01: ABOUT -->
+    <!-- 01 ABOUT -->
     <section id="about" class="section">
-      <div class="section-tag reveal"><span class="tag-num">01</span> <span class="tag-sep">/</span> BACKGROUND & FOCUS</div>
+      <div class="section-tag reveal"><span class="tag-num">01</span> <span class="tag-sep">/</span> BACKGROUND &amp; FOCUS</div>
       <h2 class="section-title reveal delay-1">Fondasi teknis dan minat riset</h2>
 
       <div class="bento-grid">
-        <!-- Tentang Saya -->
         <div class="card card-large reveal-left delay-2">
           <h3 class="card-heading">Tentang Saya</h3>
           <p class="card-text">
             Halo! Saya <strong>Yudha Dwi Anantha Laurens</strong>. Perjalanan saya di dunia teknologi berangkat dari rasa ingin tahu bagaimana sebuah sistem beroperasi di balik layar — dari arsitektur frontend yang intuitif, API backend yang efisien, hingga cara melindungi integritas data pengguna dari potensi eksploitasi.
           </p>
           <p class="card-text">
-            Saat ini saya menempuh semester 5 Computer Science di <strong>Universitas Bina Nusantara</strong> dan mendalami program mobilitas <strong>Cyber Security</strong>. Saya terbiasa mengombinasikan kebiasaan coding yang bersih (<em>clean code</em>) dengan prinsip keamanan defensif (<em>secure by design</em>).
+            Saat ini saya menempuh semester 5 Computer Science di <strong>Universitas Bina Nusantara</strong> dan mendalami program mobilitas <strong>Cyber Security</strong>. Saya terbiasa mengombinasikan kebiasaan coding yang bersih (<em>clean code</em>) dengan prinsip keamanan defensif (<em>secure by design</em>). Di luar coding, saya senang berkontribusi dalam event teknologi dan lomba.
           </p>
-          <a href="assets/CV%20Yudha%20Dwi%20Anantha%20Laurens.pdf" class="btn btn-outline mt-4"><i data-lucide="download"></i> Download Resume Lengkap (PDF)</a>
+          <a href="assets/CV%20Yudha%20Dwi%20Anantha%20Laurens.pdf" class="btn btn-outline mt-4" download><i data-lucide="download" aria-hidden="true"></i> Download Resume Lengkap (PDF)</a>
         </div>
 
-        <!-- Stats -->
         <div class="stats-col">
           <div class="card card-stat reveal-right delay-3">
-            <div class="icon-box"><i data-lucide="award"></i></div>
-            <div class="stat-num">05</div>
+            <div class="icon-box"><i data-lucide="award" aria-hidden="true"></i></div>
+            <div class="stat-num" data-count="5" data-pad="2">05</div>
             <div class="stat-label">Semester Aktif</div>
-            <div class="stat-sub">Computer Science & Cyber Security di BINUS University</div>
+            <div class="stat-sub">Computer Science &amp; Cyber Security di BINUS University</div>
           </div>
           <div class="card card-stat reveal-right delay-4">
-            <div class="icon-box"><i data-lucide="layers"></i></div>
-            <div class="stat-num">5+</div>
+            <div class="icon-box"><i data-lucide="layers" aria-hidden="true"></i></div>
+            <div class="stat-num" data-count="7" data-suffix="+">7+</div>
             <div class="stat-label">Proyek Selesai</div>
-            <div class="stat-sub">Web app, computer vision AI, dan manajemen basis data</div>
+            <div class="stat-sub">Web app, mobile pentesting, computer vision AI, dan basis data</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <h3 class="card-heading mb-4 reveal">Bidang Minat & Keahlian</h3>
-      <div class="skills-grid">
-        <div class="card skill-card reveal delay-1">
-          <div class="icon-box-sm"><i data-lucide="shield"></i></div>
-          <div class="skill-content">
-            <h4>Application & Network Security</h4>
-            <p>Memahami pencegahan OWASP Top 10, autentikasi aman, dan security auditing.</p>
-          </div>
-        </div>
-        <div class="card skill-card reveal delay-2">
-          <div class="icon-box-sm"><i data-lucide="cpu"></i></div>
-          <div class="skill-content">
-            <h4>Modern Full-Stack Development</h4>
-            <p>Membangun antarmuka interaktif dan arsitektur API terstruktur dengan Node.js, React, dan Laravel.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 02: PROJECTS -->
+      <!-- 02 PROJECTS -->
     <section id="projects" class="section">
       <div class="section-tag reveal"><span class="tag-num">02</span> <span class="tag-sep">/</span> SELECTED WORK</div>
       <div class="proj-header reveal delay-1">
-        <h2 class="section-title">Project</h2>
-        <a href="https://github.com/YudhaLaurens" target="_blank" class="proj-all-link">Semua repositori di GitHub <i data-lucide="arrow-up-right"></i></a>
+        <div>
+          <h2 class="section-title">Project</h2>
+          <p class="proj-subtitle">Koleksi aplikasi web, keamanan siber, dan AI yang dibangun dari riset hingga produksi.</p>
+        </div>
+        <a href="https://github.com/YudhaLaurens" target="_blank" rel="noopener noreferrer" class="proj-all-link">Repositori di GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
       </div>
 
-      <!-- ResQ Food -->
-      <div class="card project-card mb-4 reveal delay-2">
+      <!-- Project Filter Pills -->
+      <div class="proj-filters reveal delay-1" role="tablist" aria-label="Filter kategori proyek">
+        <button type="button" class="proj-filter-btn active" data-filter="all"><i data-lucide="layers" aria-hidden="true"></i> All Projects</button>
+        <button type="button" class="proj-filter-btn" data-filter="security"><i data-lucide="shield" aria-hidden="true"></i> Cyber Security</button>
+        <button type="button" class="proj-filter-btn" data-filter="fullstack"><i data-lucide="layout" aria-hidden="true"></i> Full-Stack Web</button>
+        <button type="button" class="proj-filter-btn" data-filter="ai"><i data-lucide="cpu" aria-hidden="true"></i> AI</button>
+      </div>
+
+      <!-- Featured Project -->
+      <div class="card project-card mb-4 reveal delay-2 tilt-card" data-category="fullstack" data-tech="nextjs,react,tailwind,vercel,restapi">
+        <div class="card-spotlight" aria-hidden="true"></div>
         <div class="proj-badges">
-          <span class="badge-featured"><i data-lucide="star" fill="currentColor"></i> Featured Web Application</span>
-          <span class="badge-live">Live Production</span>
+          <span class="badge-featured"><i data-lucide="star" fill="currentColor" aria-hidden="true"></i> Featured Web Application</span>
+          <span class="badge-live"><span class="live-pulse"></span> Live Production</span>
         </div>
         <h3 class="proj-name">ResQ-Food Platform</h3>
         <p class="proj-desc">
           Platform digital untuk meminimalkan pemborosan pangan (<em>food waste</em>). Menghubungkan gerai makanan dan restoran lokal dengan konsumen untuk menjual produk pangan berlebih berkualitas tinggi dengan potongan harga khusus.
         </p>
         <ul class="proj-features">
-          <li><i data-lucide="check-circle-2"></i> Pencarian dan penemuan gerai makanan terdekat berbasis lokasi pengguna</li>
-          <li><i data-lucide="check-circle-2"></i> Arsitektur modern Next.js App Router dengan integrasi Tailwind CSS & Vercel</li>
+          <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Pencarian dan penemuan gerai makanan terdekat berbasis lokasi pengguna</li>
+          <li><i data-lucide="check-circle-2" aria-hidden="true"></i> Arsitektur modern Next.js App Router dengan integrasi Tailwind CSS &amp; Vercel</li>
         </ul>
         <div class="proj-tech-tags">
-          <span>Next.js</span><span>React</span><span>Tailwind CSS</span><span>Vercel</span><span>REST API</span>
+          <span data-tech="nextjs">Next.js</span>
+          <span data-tech="react">React</span>
+          <span data-tech="tailwind">Tailwind CSS</span>
+          <span data-tech="vercel">Vercel</span>
+          <span data-tech="restapi">REST API</span>
         </div>
         <div class="proj-actions">
-          <a href="https://softeng-finpro-foodwaste-final.vercel.app/" target="_blank" class="btn btn-primary"><i data-lucide="external-link"></i> Buka Live Demo</a>
-          <a href="https://github.com/SAMUEL71444/softeng-Finpro-foodwaste" target="_blank" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A4.8 4.8 0 0 0 8 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> Source Code</a>
+          <a href="https://softeng-finpro-foodwaste-final.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic-btn"><i data-lucide="external-link" aria-hidden="true"></i> Buka Live Demo</a>
+          <a href="https://github.com/SAMUEL71444/softeng-Finpro-foodwaste" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic-btn"><i data-lucide="github" aria-hidden="true"></i> Source Code</a>
         </div>
       </div>
 
-      <!-- Grid for smaller projects -->
-      <div class="bento-grid">
-        <!-- CookieRisk -->
-        <div class="card proj-small-card reveal delay-1">
+      <div class="bento-grid proj-grid">
+        <div class="card proj-small-card reveal delay-1 tilt-card" data-category="security" data-tech="nodejs,express,playwright,react,tailwind,docker,owasp">
+          <div class="card-spotlight" aria-hidden="true"></div>
           <div class="proj-small-head">
-            <div class="proj-cat">CYBER SECURITY & PRIVACY</div>
-            <a href="https://github.com/CalvinWuz/CookiesAnalyzer-Website" target="_blank" class="proj-icon"><i data-lucide="github"></i></a>
+            <div class="proj-cat"><i data-lucide="shield-alert" class="mini-icon"></i> CYBER SECURITY &amp; PRIVACY</div>
+            <a href="https://github.com/CalvinWuz/CookiesAnalyzer-Website" target="_blank" rel="noopener noreferrer" class="proj-icon" aria-label="Repositori CookieRisk Analyzer"><i data-lucide="github" aria-hidden="true"></i></a>
           </div>
-          <h4 class="proj-small-title">CookieRisk Analyzer</h4>
-          <p class="proj-small-desc">Platform analisis risiko privasi web untuk mendeteksi dan mengaudit third-party cookies otomatis via headless Playwright, scoring ISO 27005 & OWASP Risk Rating, serta audit kepatuhan terhadap UU PDP No. 27/2022 dan GDPR.</p>
-          <div class="proj-tech-tags"><span>Node.js</span><span>Express</span><span>Playwright</span><span>React 18</span><span>Tailwind CSS</span><span>Docker</span></div>
+          <h3 class="proj-small-title">CookieRisk Analyzer</h3>
+          <p class="proj-small-desc">Platform analisis risiko privasi web untuk mendeteksi dan mengaudit third-party cookies otomatis via headless Playwright, scoring ISO 27005 &amp; OWASP Risk Rating, serta audit kepatuhan terhadap UU PDP No. 27/2022 dan GDPR.</p>
+          <div class="proj-tech-tags">
+            <span data-tech="nodejs">Node.js</span>
+            <span data-tech="express">Express</span>
+            <span data-tech="playwright">Playwright</span>
+            <span data-tech="react">React 18</span>
+            <span data-tech="tailwind">Tailwind CSS</span>
+            <span data-tech="docker">Docker</span>
+          </div>
           <div class="proj-small-footer">
-            <a href="https://github.com/CalvinWuz/CookiesAnalyzer-Website" target="_blank" class="btn btn-source"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A4.8 4.8 0 0 0 8 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> Source Code</a>
+            <a href="https://github.com/CalvinWuz/CookiesAnalyzer-Website" target="_blank" rel="noopener noreferrer" class="btn-source magnetic-btn"><i data-lucide="github" aria-hidden="true"></i> Source Code</a>
           </div>
         </div>
 
-        <!-- AI Handsign -->
-        <div class="card proj-small-card reveal delay-2">
+        <div class="card proj-small-card reveal delay-2 tilt-card" data-category="security" data-tech="jadx,apktool,smali,adb,sqlite,owasp">
+          <div class="card-spotlight" aria-hidden="true"></div>
           <div class="proj-small-head">
-            <div class="proj-cat">COMPUTER VISION / AI</div>
-            <a href="https://github.com/Syahril2401/ASL_SignLanguage" target="_blank" class="proj-icon"><i data-lucide="github"></i></a>
+            <div class="proj-cat"><i data-lucide="key-round" class="mini-icon"></i> MOBILE PENTESTING &amp; APPSEC</div>
+            <span class="proj-icon" aria-hidden="true"><i data-lucide="shield-check"></i></span>
           </div>
-          <h4 class="proj-small-title">AI Handsign Recognition</h4>
+          <h3 class="proj-small-title">OTA Mobile App Security Assessment</h3>
+          <p class="proj-small-desc">Penetration testing pada aplikasi Android Online Travel Agent: mengidentifikasi 4 celah ber-scoring CVSS (absennya root detection, eksposur token JWT &amp; PII plaintext di SharedPreferences, akses 10 tabel SQLite tidak terenkripsi, dan konfigurasi backup tidak aman) beserta rekomendasi remediasi.</p>
+          <div class="proj-tech-tags">
+            <span data-tech="jadx">JADX-GUI</span>
+            <span data-tech="apktool">APKTool</span>
+            <span data-tech="smali">Smali</span>
+            <span data-tech="adb">ADB &amp; Rooted AVD</span>
+            <span data-tech="sqlite">SQLite</span>
+            <span data-tech="owasp">CVSS Scoring</span>
+          </div>
+        </div>
+
+        <div class="card proj-small-card reveal delay-2 tilt-card" data-category="ai" data-tech="python,opencv,mediapipe,tensorflow,flask">
+          <div class="card-spotlight" aria-hidden="true"></div>
+          <div class="proj-small-head">
+            <div class="proj-cat"><i data-lucide="eye" class="mini-icon"></i> COMPUTER VISION / AI</div>
+            <a href="https://github.com/Syahril2401/ASL_SignLanguage" target="_blank" rel="noopener noreferrer" class="proj-icon" aria-label="Repositori AI Handsign Recognition"><i data-lucide="github" aria-hidden="true"></i></a>
+          </div>
+          <h3 class="proj-small-title">AI Handsign Recognition</h3>
           <p class="proj-small-desc">Aplikasi pengenalan bahasa isyarat menggunakan deep learning dan computer vision real-time melalui webcam untuk membantu aksesibilitas komunikasi.</p>
-          <div class="proj-tech-tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>TensorFlow</span><span>Flask</span></div>
+          <div class="proj-tech-tags">
+            <span data-tech="python">Python</span>
+            <span data-tech="opencv">OpenCV</span>
+            <span data-tech="mediapipe">MediaPipe</span>
+            <span data-tech="tensorflow">TensorFlow</span>
+            <span data-tech="flask">Flask</span>
+          </div>
           <div class="proj-small-footer">
-            <a href="https://github.com/Syahril2401/ASL_SignLanguage" target="_blank" class="btn btn-source"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A4.8 4.8 0 0 0 8 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> Source Code</a>
+            <a href="https://github.com/Syahril2401/ASL_SignLanguage" target="_blank" rel="noopener noreferrer" class="btn-source magnetic-btn"><i data-lucide="github" aria-hidden="true"></i> Source Code</a>
           </div>
         </div>
 
-        <!-- Library Management -->
-        <div class="card proj-small-card reveal delay-3">
+        <div class="card proj-small-card reveal delay-3 tilt-card" data-category="fullstack" data-tech="laravel,php,mysql,vite">
+          <div class="card-spotlight" aria-hidden="true"></div>
           <div class="proj-small-head">
-            <div class="proj-cat">WEB APPLICATION / CRUD</div>
-            <a href="https://github.com/YudhaLaurens/LibraryFinpro" target="_blank" class="proj-icon"><i data-lucide="github"></i></a>
+            <div class="proj-cat"><i data-lucide="database" class="mini-icon"></i> WEB APPLICATION / CRUD</div>
+            <a href="https://github.com/YudhaLaurens/LibraryFinpro" target="_blank" rel="noopener noreferrer" class="proj-icon" aria-label="Repositori Library Management System"><i data-lucide="github" aria-hidden="true"></i></a>
           </div>
-          <h4 class="proj-small-title">Library Management System</h4>
+          <h3 class="proj-small-title">Library Management System</h3>
           <p class="proj-small-desc">Sistem informasi perpustakaan terstruktur dengan autentikasi pengguna, manajemen inventaris buku, sistem denda, serta pencarian buku berkategori.</p>
-          <div class="proj-tech-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Vite</span></div>
+          <div class="proj-tech-tags">
+            <span data-tech="laravel">Laravel</span>
+            <span data-tech="php">PHP</span>
+            <span data-tech="mysql">MySQL</span>
+            <span data-tech="vite">Vite</span>
+          </div>
           <div class="proj-small-footer">
-            <a href="https://github.com/YudhaLaurens/LibraryFinpro" target="_blank" class="btn btn-source"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A4.8 4.8 0 0 0 8 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> Source Code</a>
+            <a href="https://github.com/YudhaLaurens/LibraryFinpro" target="_blank" rel="noopener noreferrer" class="btn-source magnetic-btn"><i data-lucide="github" aria-hidden="true"></i> Source Code</a>
           </div>
         </div>
 
-        <!-- BelanjaRia -->
-        <div class="card proj-small-card reveal delay-4">
+        <div class="card proj-small-card reveal delay-4 tilt-card" data-category="fullstack" data-tech="react,nodejs,mongodb,express">
+          <div class="card-spotlight" aria-hidden="true"></div>
           <div class="proj-small-head">
-            <div class="proj-cat">FULL-STACK MERN</div>
-            <a href="https://github.com/YudhaLaurens/FinalProjectBelanjaRia" target="_blank" class="proj-icon"><i data-lucide="github"></i></a>
+            <div class="proj-cat"><i data-lucide="shopping-bag" class="mini-icon"></i> FULL-STACK MERN</div>
+            <a href="https://github.com/YudhaLaurens/FinalProjectBelanjaRia" target="_blank" rel="noopener noreferrer" class="proj-icon" aria-label="Repositori BelanjaRia Online Store"><i data-lucide="github" aria-hidden="true"></i></a>
           </div>
-          <h4 class="proj-small-title">BelanjaRia Online Store</h4>
+          <h3 class="proj-small-title">BelanjaRia Online Store</h3>
           <p class="proj-small-desc">Aplikasi toko online komprehensif mencakup katalog dinamis, state management keranjang belanja, dashboard admin, dan simulasi alur checkout.</p>
-          <div class="proj-tech-tags"><span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Express</span></div>
+          <div class="proj-tech-tags">
+            <span data-tech="react">React.js</span>
+            <span data-tech="nodejs">Node.js</span>
+            <span data-tech="mongodb">MongoDB</span>
+            <span data-tech="express">Express</span>
+          </div>
           <div class="proj-small-footer">
-            <a href="https://github.com/YudhaLaurens/FinalProjectBelanjaRia" target="_blank" class="btn btn-source"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A4.8 4.8 0 0 0 8 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> Source Code</a>
+            <a href="https://github.com/YudhaLaurens/FinalProjectBelanjaRia" target="_blank" rel="noopener noreferrer" class="btn-source magnetic-btn"><i data-lucide="github" aria-hidden="true"></i> Source Code</a>
           </div>
         </div>
 
-        <!-- Food Ordering -->
-        <div class="card proj-small-card reveal delay-5">
+        <div class="card proj-small-card reveal delay-5 tilt-card" data-category="fullstack" data-tech="reactnative,postgresql,mapbox,nodejs">
+          <div class="card-spotlight" aria-hidden="true"></div>
           <div class="proj-small-head">
-            <div class="proj-cat">MOBILE APPLICATION</div>
-            <a href="https://github.com/Bintangqurne/PDM-final-project" target="_blank" class="proj-icon"><i data-lucide="github"></i></a>
+            <div class="proj-cat"><i data-lucide="smartphone" class="mini-icon"></i> MOBILE APPLICATION</div>
+            <a href="https://github.com/Bintangqurne/PDM-final-project" target="_blank" rel="noopener noreferrer" class="proj-icon" aria-label="Repositori Food Ordering App"><i data-lucide="github" aria-hidden="true"></i></a>
           </div>
-          <h4 class="proj-small-title">Food Ordering App</h4>
+          <h3 class="proj-small-title">Food Ordering App</h3>
           <p class="proj-small-desc">Aplikasi pemesanan kuliner berbasis mobile dengan penentuan rute kurir, sistem ulasan menu restoran, dan database relasional PostgreSQL.</p>
-          <div class="proj-tech-tags"><span>React Native</span><span>PostgreSQL</span><span>Mapbox</span><span>Node.js</span></div>
+          <div class="proj-tech-tags">
+            <span data-tech="reactnative">React Native</span>
+            <span data-tech="postgresql">PostgreSQL</span>
+            <span data-tech="mapbox">Mapbox</span>
+            <span data-tech="nodejs">Node.js</span>
+          </div>
           <div class="proj-small-footer">
-            <a href="https://github.com/Bintangqurne/PDM-final-project" target="_blank" class="btn btn-source"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A4.8 4.8 0 0 0 8 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> Source Code</a>
+            <a href="https://github.com/Bintangqurne/PDM-final-project" target="_blank" rel="noopener noreferrer" class="btn-source magnetic-btn"><i data-lucide="github" aria-hidden="true"></i> Source Code</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 03: TECHNICAL CAPABILITIES -->
-    <section id="tech" class="section">
+    <!-- 03 SKILLS -->
+    <section id="skills" class="section">
       <div class="section-tag reveal"><span class="tag-num">03</span> <span class="tag-sep">/</span> TECHNICAL CAPABILITIES</div>
-      <h2 class="section-title reveal delay-1">Stack teknologi & alat yang digunakan</h2>
+      <div class="skills-heading-wrap reveal delay-1">
+        <h2 class="section-title">Stack teknologi &amp; alat yang digunakan</h2>
+        <p class="skills-subtitle">Klik atau hover badge teknologi untuk menyorot proyek terkait di portofolio.</p>
+      </div>
 
-      <div class="bento-grid">
-        <div class="card reveal delay-1">
+      <!-- Infinite Tech Marquee Ribbon -->
+      <div class="tech-marquee-container reveal delay-2" aria-hidden="true">
+        <div class="tech-marquee-track">
+          <!-- Set 1 -->
+          <div class="tech-marquee-item"><i data-lucide="shield-check"></i> OWASP Top 10</div>
+          <div class="tech-marquee-item"><i data-lucide="layers"></i> Next.js 14</div>
+          <div class="tech-marquee-item"><i data-lucide="code-2"></i> TypeScript</div>
+          <div class="tech-marquee-item"><i data-lucide="cpu"></i> React 18</div>
+          <div class="tech-marquee-item"><i data-lucide="server"></i> Node.js</div>
+          <div class="tech-marquee-item"><i data-lucide="box"></i> Docker</div>
+          <div class="tech-marquee-item"><i data-lucide="bug"></i> Playwright</div>
+          <div class="tech-marquee-item"><i data-lucide="terminal"></i> Python</div>
+          <div class="tech-marquee-item"><i data-lucide="eye"></i> OpenCV</div>
+          <div class="tech-marquee-item"><i data-lucide="database"></i> PostgreSQL</div>
+          <div class="tech-marquee-item"><i data-lucide="database"></i> MongoDB</div>
+          <div class="tech-marquee-item"><i data-lucide="flame"></i> Laravel</div>
+          <div class="tech-marquee-item"><i data-lucide="palette"></i> Tailwind CSS</div>
+          <div class="tech-marquee-item"><i data-lucide="terminal"></i> Linux CLI</div>
+
+          <!-- Set 2 (Duplicate for continuous loop) -->
+          <div class="tech-marquee-item"><i data-lucide="shield-check"></i> OWASP Top 10</div>
+          <div class="tech-marquee-item"><i data-lucide="layers"></i> Next.js 14</div>
+          <div class="tech-marquee-item"><i data-lucide="code-2"></i> TypeScript</div>
+          <div class="tech-marquee-item"><i data-lucide="cpu"></i> React 18</div>
+          <div class="tech-marquee-item"><i data-lucide="server"></i> Node.js</div>
+          <div class="tech-marquee-item"><i data-lucide="box"></i> Docker</div>
+          <div class="tech-marquee-item"><i data-lucide="bug"></i> Playwright</div>
+          <div class="tech-marquee-item"><i data-lucide="terminal"></i> Python</div>
+          <div class="tech-marquee-item"><i data-lucide="eye"></i> OpenCV</div>
+          <div class="tech-marquee-item"><i data-lucide="database"></i> PostgreSQL</div>
+          <div class="tech-marquee-item"><i data-lucide="database"></i> MongoDB</div>
+          <div class="tech-marquee-item"><i data-lucide="flame"></i> Laravel</div>
+          <div class="tech-marquee-item"><i data-lucide="palette"></i> Tailwind CSS</div>
+          <div class="tech-marquee-item"><i data-lucide="terminal"></i> Linux CLI</div>
+        </div>
+      </div>
+
+      <div class="bento-grid skills-grid-wrap">
+        <div class="card reveal delay-1 tilt-card skill-card-bento">
+          <div class="card-spotlight" aria-hidden="true"></div>
           <div class="skill-head">
-            <div class="icon-box-sm"><i data-lucide="layout"></i></div>
-            <h4>Frontend Development</h4>
+            <div class="icon-box-sm skill-icon-frontend"><i data-lucide="layout" aria-hidden="true"></i></div>
+            <div>
+              <h3>Frontend Development</h3>
+              <span class="skill-status-tag">Interactive &amp; Semantic</span>
+            </div>
           </div>
-          <p class="card-text mb-4">Membangun UI responsif, terstruktur semantik, dan mudah diakses.</p>
-          <div class="proj-tech-tags">
-            <span>HTML5</span><span>CSS3 / SCSS</span><span>JavaScript (ES6+)</span><span>TypeScript</span><span>React.js</span><span>Next.js</span><span>Tailwind CSS</span>
+          <p class="card-text mb-4">Membangun antarmuka modern, responsif, terstruktur semantik, dan mudah diakses (a11y).</p>
+          <div class="proj-tech-tags skill-interactive-tags">
+            <span class="skill-pill" data-tech="html5">HTML5</span>
+            <span class="skill-pill" data-tech="css3">CSS3 / SCSS</span>
+            <span class="skill-pill" data-tech="javascript">JavaScript (ES6+)</span>
+            <span class="skill-pill" data-tech="typescript">TypeScript</span>
+            <span class="skill-pill" data-tech="react">React.js</span>
+            <span class="skill-pill" data-tech="nextjs">Next.js</span>
+            <span class="skill-pill" data-tech="tailwind">Tailwind CSS</span>
           </div>
         </div>
-        
-        <div class="card reveal delay-2">
+
+        <div class="card reveal delay-2 tilt-card skill-card-bento">
+          <div class="card-spotlight" aria-hidden="true"></div>
           <div class="skill-head">
-            <div class="icon-box-sm"><i data-lucide="server"></i></div>
-            <h4>Backend & Architecture</h4>
+            <div class="icon-box-sm skill-icon-backend"><i data-lucide="server" aria-hidden="true"></i></div>
+            <div>
+              <h3>Backend &amp; Architecture</h3>
+              <span class="skill-status-tag">RESTful &amp; Secure APIs</span>
+            </div>
           </div>
-          <p class="card-text mb-4">Pembuatan REST API, logika autentikasi, dan pengolahan data server.</p>
-          <div class="proj-tech-tags">
-            <span>Node.js</span><span>Express.js</span><span>Python</span><span>Java</span><span>PHP / Laravel</span><span>RESTful API</span>
+          <p class="card-text mb-4">Pembuatan REST API terstruktur, autentikasi aman, validasi input berlapis, dan server logic.</p>
+          <div class="proj-tech-tags skill-interactive-tags">
+            <span class="skill-pill" data-tech="nodejs">Node.js</span>
+            <span class="skill-pill" data-tech="express">Express.js</span>
+            <span class="skill-pill" data-tech="python">Python</span>
+            <span class="skill-pill" data-tech="java">Java</span>
+            <span class="skill-pill" data-tech="php">PHP</span>
+            <span class="skill-pill" data-tech="laravel">Laravel</span>
+            <span class="skill-pill" data-tech="restapi">RESTful API</span>
           </div>
         </div>
 
-        <div class="card reveal delay-3">
+        <div class="card reveal delay-3 tilt-card skill-card-bento">
+          <div class="card-spotlight" aria-hidden="true"></div>
           <div class="skill-head">
-            <div class="icon-box-sm"><i data-lucide="database"></i></div>
-            <h4>Database & Storage</h4>
+            <div class="icon-box-sm skill-icon-database"><i data-lucide="database" aria-hidden="true"></i></div>
+            <div>
+              <h3>Database &amp; Storage</h3>
+              <span class="skill-status-tag">Relational &amp; NoSQL</span>
+            </div>
           </div>
-          <p class="card-text mb-4">Perancangan skema relasional, indeksasi, dan query data.</p>
-          <div class="proj-tech-tags">
-            <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Database Normalization</span>
+          <p class="card-text mb-4">Perancangan skema terstandarisasi, normalisasi data, indeksasi performa, dan integritas transaksi.</p>
+          <div class="proj-tech-tags skill-interactive-tags">
+            <span class="skill-pill" data-tech="mysql">MySQL</span>
+            <span class="skill-pill" data-tech="postgresql">PostgreSQL</span>
+            <span class="skill-pill" data-tech="mongodb">MongoDB</span>
+            <span class="skill-pill" data-tech="database">Normalization</span>
           </div>
         </div>
 
-        <div class="card reveal delay-4">
+        <div class="card reveal delay-4 tilt-card skill-card-bento">
+          <div class="card-spotlight" aria-hidden="true"></div>
           <div class="skill-head">
-            <div class="icon-box-sm"><i data-lucide="shield-check"></i></div>
-            <h4>Security & DevOps Tools</h4>
+            <div class="icon-box-sm skill-icon-security"><i data-lucide="shield-check" aria-hidden="true"></i></div>
+            <div>
+              <h3>Security &amp; DevOps Tools</h3>
+              <div class="security-radar-badge"><span class="radar-ping"></span> Defensive Mobility</div>
+            </div>
           </div>
-          <p class="card-text mb-4">Lingkungan pengujian kode, kontrol versi, dan otomasi deploy.</p>
-          <div class="proj-tech-tags">
-            <span>Git & GitHub</span><span>Docker Containers</span><span>Linux Environment</span><span>Vercel</span><span>VS Code</span><span>Figma</span>
+          <p class="card-text mb-4">Mitigasi OWASP Top 10, mobile pentesting, audit otomatis Playwright, dan isolasi environment Docker.</p>
+          <div class="proj-tech-tags skill-interactive-tags">
+            <span class="skill-pill" data-tech="owasp">OWASP Top 10</span>
+            <span class="skill-pill" data-tech="jadx">JADX-GUI</span>
+            <span class="skill-pill" data-tech="apktool">APKTool</span>
+            <span class="skill-pill" data-tech="frida">Frida</span>
+            <span class="skill-pill" data-tech="burpsuite">BurpSuite</span>
+            <span class="skill-pill" data-tech="playwright">Playwright</span>
+            <span class="skill-pill" data-tech="docker">Docker</span>
+            <span class="skill-pill" data-tech="git">Git &amp; GitHub</span>
+            <span class="skill-pill" data-tech="linux">Linux CLI</span>
+            <span class="skill-pill" data-tech="vercel">Vercel</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 04: TIMELINE -->
+    <!-- 04 TIMELINE (roller) -->
     <section id="journey" class="section">
-      <div class="section-tag reveal"><span class="tag-num">04</span> <span class="tag-sep">/</span> TIMELINE & EXPERIENCE</div>
-      <h2 class="section-title reveal delay-1">Pengalaman kerja & rekam jejak akademik</h2>
+      <div class="section-tag reveal"><span class="tag-num">04</span> <span class="tag-sep">/</span> TIMELINE &amp; EXPERIENCE</div>
+      <h2 class="section-title reveal delay-1">Pengalaman kerja &amp; rekam jejak akademik</h2>
 
-      <div class="bento-grid">
-        <!-- Pengalaman Kerja -->
-        <div class="timeline-col reveal-left delay-2">
-          <h3 class="card-heading"><i data-lucide="briefcase"></i> Pengalaman Kerja</h3>
-          
-          <div class="card time-card">
-            <div class="time-date">Sept 2023 — Jan 2024</div>
-            <h4 class="time-role">Content Production & Creative Specialist</h4>
-            <div class="time-org">PT Selda Design & Digital Marketing (SDS Visual)</div>
-            <p class="time-desc">Membantu proses produksi visual multimedia untuk klien di berbagai kanal digital, serta terlibat langsung dalam alur operasional photoshoot dan penataan aset branding.</p>
-          </div>
-
-          <div class="card time-card mt-4">
-            <div class="time-date">Juni 2023 — Sept 2023</div>
-            <h4 class="time-role">Graphic Designer & Creative Content Intern</h4>
-            <div class="time-org">PT Kalman Group Indonesia</div>
-            <p class="time-desc">Merancang aset visual promosi, materi komunikasi brand, dan konten kreatif yang disesuaikan dengan kebutuhan kampanye berbagai klien perusahaan.</p>
-          </div>
-        </div>
-
-        <!-- Pendidikan -->
-        <div class="timeline-col reveal-right delay-3">
-          <h3 class="card-heading"><i data-lucide="book-open"></i> Riwayat Pendidikan</h3>
-          
-          <div class="card time-card">
-            <div class="time-badge">2024 — Sekarang (Semester 5)</div>
-            <h4 class="time-role mt-2">S1 Computer Science</h4>
-            <div class="time-org">Universitas Bina Nusantara (BINUS University)</div>
-            <p class="time-desc">Program Mobility <strong>Cyber Security</strong>. Fokus pada konstruksi algoritma, struktur data terdistribusi, keamanan jaringan, kriptografi dasar, dan arsitektur piranti lunak.</p>
-          </div>
-
-          <div class="card time-card mt-4">
-            <div class="time-date">Lulus 2024</div>
-            <h4 class="time-role">Pendidikan Menengah Kejuruan</h4>
-            <div class="time-org">SMK Pariwisata Harapan, Denpasar — Bali</div>
-            <p class="time-desc">Membangun dasar disiplin kerja, komunikasi profesional tim, dan etos kolaborasi sebelum melanjutkan pendidikan tinggi di bidang ilmu komputer.</p>
-          </div>
-        </div>
+      <div class="timeline-roller reveal delay-2" id="timeline" aria-roledescription="carousel" aria-label="Timeline pengalaman dan pendidikan">
+        <!--
+          Sumber data timeline. JS membaca daftar ini lalu membangun roller 3D.
+          Tanpa JavaScript, daftar ini tampil sebagai list biasa. Urutan: terbaru → terlama.
+        -->
+        <ol class="tl-source" id="timeline-source">
+          <li data-type="education" data-current="true">
+            <span class="tl-year">2024 — Sekarang</span>
+            <h3 class="tl-role">S1 Computer Science</h3>
+            <p class="tl-org">Universitas Bina Nusantara (BINUS University)</p>
+            <p class="tl-desc">Semester 5, program Mobility <strong>Cyber Security</strong>. Fokus pada konstruksi algoritma, struktur data terdistribusi, keamanan jaringan, kriptografi dasar, dan arsitektur piranti lunak.</p>
+          </li>
+          <li data-type="work">
+            <span class="tl-year">Sept 2023 — Jan 2024</span>
+            <h3 class="tl-role">Content Production &amp; Creative Specialist</h3>
+            <p class="tl-org">PT Selda Design &amp; Digital Marketing (SDS Visual)</p>
+            <p class="tl-desc">Membantu proses produksi visual multimedia untuk klien di berbagai kanal digital, serta terlibat langsung dalam alur operasional photoshoot dan penataan aset branding.</p>
+          </li>
+          <li data-type="work">
+            <span class="tl-year">Juni 2023 — Sept 2023</span>
+            <h3 class="tl-role">Graphic Designer &amp; Creative Content Intern</h3>
+            <p class="tl-org">PT Kalman Group Indonesia</p>
+            <p class="tl-desc">Merancang aset visual promosi, materi komunikasi brand, dan konten kreatif yang disesuaikan dengan kebutuhan kampanye berbagai klien perusahaan.</p>
+          </li>
+          <li data-type="education">
+            <span class="tl-year">Lulus 2024</span>
+            <h3 class="tl-role">Pendidikan Menengah Kejuruan</h3>
+            <p class="tl-org">SMK Pariwisata Harapan, Denpasar — Bali</p>
+            <p class="tl-desc">Membangun dasar disiplin kerja, komunikasi profesional tim, dan etos kolaborasi sebelum melanjutkan pendidikan tinggi di bidang ilmu komputer.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- SECTION 05: CERTIFICATES -->
+    <!-- 05 CERTIFICATES -->
     <section id="certificates" class="section">
       <div class="section-tag reveal"><span class="tag-num">05</span> <span class="tag-sep">/</span> VERIFIED CREDENTIALS</div>
-      <h2 class="section-title reveal delay-1">Sertifikasi & pencapaian</h2>
+      <h2 class="section-title reveal delay-1">Sertifikasi &amp; pencapaian</h2>
 
       <div class="card cert-card reveal delay-2">
-        <a href="assets/cert_bncc.jpg" target="_blank" class="cert-img-wrapper">
-          <img src="assets/cert_bncc.jpg" alt="BNCC Certificate" class="cert-img">
+        <a href="assets/cert_google_cybersecurity.jpg" target="_blank" rel="noopener noreferrer" class="cert-img-wrapper" aria-label="Lihat sertifikat Google Foundations of Cybersecurity dalam resolusi penuh">
+          <img src="assets/cert_google_cybersecurity.jpg" alt="Sertifikat Foundations of Cybersecurity — Google &amp; Coursera" class="cert-img" width="1600" height="1236" loading="lazy" decoding="async">
           <div class="cert-overlay">
-            <div class="btn btn-resolusi"><i data-lucide="maximize-2"></i> Lihat Full Resolusi</div>
+            <div class="btn-resolusi"><i data-lucide="maximize-2" aria-hidden="true"></i> Lihat Full Resolusi</div>
+          </div>
+        </a>
+        <div class="cert-info">
+          <span class="cert-badge">Google Career Certificates</span>
+          <h3 class="cert-title">Foundations of Cybersecurity</h3>
+          <p class="cert-issuer">Google (via Coursera) — Oktober 2026</p>
+          <p class="cert-desc">Penguasaan prinsip dasar keamanan siber, kerangka kerja manajemen risiko (NIST CSF), etika keamanan informasi, triad CIA, audit kepatuhan, serta pengenalan <em>tools</em> SIEM dan analisis insiden keamanan.</p>
+          <div class="cert-actions">
+            <a href="https://coursera.org/verify/9PF3S2WUGVZT" target="_blank" rel="noopener noreferrer" class="btn-source magnetic-btn"><i data-lucide="external-link" aria-hidden="true"></i> Verifikasi Kredensial</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card cert-card reveal delay-3">
+        <a href="assets/cert_bncc.jpg" target="_blank" rel="noopener noreferrer" class="cert-img-wrapper" aria-label="Lihat sertifikat BNCC dalam resolusi penuh">
+          <picture>
+            <source type="image/webp" srcset="assets/cert_bncc.webp">
+            <img src="assets/cert_bncc.jpg" alt="Sertifikat Front-End Development BNCC" class="cert-img" width="979" height="696" loading="lazy" decoding="async">
+          </picture>
+          <div class="cert-overlay">
+            <div class="btn-resolusi"><i data-lucide="maximize-2" aria-hidden="true"></i> Lihat Full Resolusi</div>
           </div>
         </a>
         <div class="cert-info">
@@ -365,72 +549,63 @@
       </div>
     </section>
 
-    <!-- SECTION 06: CONTACT -->
+    <!-- 06 CONTACT -->
     <section id="contact" class="section">
       <div class="section-tag reveal"><span class="tag-num">06</span> <span class="tag-sep">/</span> GET IN TOUCH</div>
-      <h2 class="section-title reveal delay-1">Mari terhubung & berkolaborasi</h2>
+      <h2 class="section-title reveal delay-1">Mari terhubung &amp; berkolaborasi</h2>
 
       <div class="bento-grid">
-        <!-- Info -->
         <div class="card reveal-left delay-2">
           <h3 class="card-heading">Membuka peluang baru</h3>
           <p class="card-text mb-4">Saya terbuka untuk kesempatan <strong>magang (internship)</strong>, kolaborasi riset keamanan sistem, maupun pengembangan proyek web modern. Jangan ragu menyapa melalui pesan langsung atau formulir di samping.</p>
-          
+
           <div class="contact-links">
             <a href="mailto:yudhaanantha@gmail.com" class="contact-block">
-              <div class="c-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-              <div class="c-text">
-                <span>EMAIL LANGSUNG</span>
-                <strong>yudhaanantha@gmail.com</strong>
-              </div>
+              <div class="c-icon"><i data-lucide="mail" aria-hidden="true"></i></div>
+              <div class="c-text"><span>EMAIL LANGSUNG</span><strong>yudhaanantha@gmail.com</strong></div>
             </a>
-            <a href="https://linkedin.com/in/yudha-laurens" target="_blank" class="contact-block">
-              <div class="c-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></div>
-              <div class="c-text">
-                <span>LINKEDIN</span>
-                <strong>linkedin.com/in/yudha-laurens</strong>
-              </div>
+            <a href="https://www.linkedin.com/in/yudha-laurens/" target="_blank" rel="noopener noreferrer" class="contact-block">
+              <div class="c-icon"><i data-lucide="linkedin" aria-hidden="true"></i></div>
+              <div class="c-text"><span>LINKEDIN</span><strong>linkedin.com/in/yudha-laurens</strong></div>
             </a>
-            <a href="https://github.com/YudhaLaurens" target="_blank" class="contact-block">
-              <div class="c-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A4.8 4.8 0 0 0 8 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></div>
-              <div class="c-text">
-                <span>GITHUB PROFILE</span>
-                <strong>github.com/YudhaLaurens</strong>
-              </div>
+            <a href="https://github.com/YudhaLaurens" target="_blank" rel="noopener noreferrer" class="contact-block">
+              <div class="c-icon"><i data-lucide="github" aria-hidden="true"></i></div>
+              <div class="c-text"><span>GITHUB PROFILE</span><strong>github.com/YudhaLaurens</strong></div>
             </a>
             <div class="contact-block">
-              <div class="c-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
-              <div class="c-text">
-                <span>DOMISILI</span>
-                <strong>Jakarta / Malang, Indonesia</strong>
-              </div>
+              <div class="c-icon"><i data-lucide="map-pin" aria-hidden="true"></i></div>
+              <div class="c-text"><span>DOMISILI</span><strong>Jakarta / Malang, Indonesia</strong></div>
             </div>
           </div>
         </div>
 
-        <!-- Form -->
         <div class="card reveal-right delay-3">
           <h3 class="card-heading">Kirim Pesan</h3>
-          <form class="contact-form" onsubmit="event.preventDefault();">
+          <!--
+            Form ini membuka aplikasi email pengguna (mailto) berisi pesan yang sudah terisi — tanpa backend.
+            Jika nanti ingin kirim langsung dari website, ganti ke Formspree/EmailJS (lihat script.js).
+          -->
+          <form class="contact-form" id="contact-form" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label>Nama Lengkap</label>
-                <input type="text" placeholder="John Doe">
+                <label for="cf-name">Nama Lengkap</label>
+                <input type="text" id="cf-name" name="name" placeholder="John Doe" autocomplete="name" required>
               </div>
               <div class="form-group">
-                <label>Alamat Email</label>
-                <input type="email" placeholder="john@example.com">
+                <label for="cf-email">Alamat Email</label>
+                <input type="email" id="cf-email" name="email" placeholder="john@example.com" autocomplete="email" required>
               </div>
             </div>
             <div class="form-group">
-              <label>Subjek</label>
-              <input type="text" placeholder="Diskusi Proyek / Penawaran Magang">
+              <label for="cf-subject">Subjek</label>
+              <input type="text" id="cf-subject" name="subject" placeholder="Diskusi Proyek / Penawaran Magang" required>
             </div>
             <div class="form-group">
-              <label>Isi Pesan</label>
-              <textarea rows="4" placeholder="Ceritakan detail proyek atau pertanyaan Anda..."></textarea>
+              <label for="cf-message">Isi Pesan</label>
+              <textarea id="cf-message" name="message" rows="4" placeholder="Ceritakan detail proyek atau pertanyaan Anda..." required></textarea>
             </div>
-            <button class="btn btn-primary w-full" style="width: 100%; justify-content: center;">Kirim Pesan Sekarang <i data-lucide="send"></i></button>
+            <button type="submit" class="btn btn-primary btn-full">Kirim Pesan <i data-lucide="send" aria-hidden="true"></i></button>
+            <p class="form-note" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -439,12 +614,10 @@
   </main>
 
   <footer class="footer">
-    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
-      <div style="font-weight: 600;">Yudha Dwi Anantha Laurens</div>
-      <div style="color: var(--text-muted); font-size: 0.85rem;">© 2026. All rights reserved.</div>
+    <div class="footer-inner">
+      <div class="footer-name">Yudha Dwi Anantha Laurens</div>
+      <div class="footer-copy">© 2026. All rights reserved.</div>
     </div>
   </footer>
-
-  <script src="script.js?v=7"></script>
 </body>
 </html>
